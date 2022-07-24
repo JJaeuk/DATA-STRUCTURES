@@ -36,7 +36,8 @@ void adjust(int a[], int mid, int cnt){     // 최대힙구조 만드는 알고�
             j = 2*j;                    // j*=2를 통해 바뀐자리의 자식노드과 비교
         }
     }
-    a[j/2-1] = k;                       // while이 작동되지 않으면 a[mid-1]=a[mid-1] 그대로임. 
+    a[j/2-1] = k;                       // while 마지막에 j*=2로 보내놨기 때문에 while이 멈추면 다시 한칸 올려줘야함. 부모였던 노드의 값을 넣어줌 
+                                        // while이 작동되지 않으면 a[mid-1]=a[mid-1] 그대로임. 
 }
 
 void heap_sort(int a[], int cnt){
